@@ -1,3 +1,6 @@
+let month=[31,29,31,30,31,30,31,31,30,31,30,31];
+let weeks = ["FRI", "SAT","SUN", "MON", "TUE", "WED", "THU"];
+
 function solution(a, b) {
   var answer = '';
 
