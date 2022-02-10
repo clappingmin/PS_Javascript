@@ -1,0 +1,43 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>출력결과</title>
+</head>
+
+<body>
+  <script>
+    function solution(arr) {
+
+      // arr.forEach(함수)
+      console.log('forEach')
+      arr.forEach((a) => console.log(a))
+
+      console.log('map')
+      arr.map((a) => console.log(a))
+
+      // arr.filter(a => 조건 or 실행문)
+      console.log('filter')
+      arr = arr.filter(a => a > 50)
+      console.log(arr) // 50보다 큰 애들만 있s는 배열
+
+      // arr.reduce
+      const array1 = [1, 2, 3, 4];
+      const reducer = (previousValue, currentValue) => previousValue + currentValue;
+
+      // 1 + 2 + 3 + 4
+      console.log(array1.reduce(reducer));
+      // expected output: 10
+
+      // 5 + 1 + 2 + 3 + 4
+      console.log(array1.reduce(reducer, 5));
+      // expected output: 15
+
+    }
+
+    arr = [12, 77, 38, 41, 53, 92, 85];
+    console.log(solution(arr));
+  </script>
+</body>
+
+</html>

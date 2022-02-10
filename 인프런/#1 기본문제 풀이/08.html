@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>출력결과</title>
+</head>
+
+<body>
+  <script>
+    function solution(arr) {
+      let answer = arr;
+      let sum = arr.reduce((prev, now) => prev + now);
+      let not1, not2;
+
+      console.log(sum);
+
+      for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+          if (sum - (arr[i] + arr[j]) === 100) {
+            not1 = i;
+            not2 = j;
+
+            // 여기서 굳이 for문 더 돌 필요 없이
+            // for (let k = 0; k < arr.length; k++) {
+            //   if (k === not1 || k === not2)
+            //     continue;
+
+            //   answer.push(arr[k]);
+            // }
+
+            answer.splice(i, 1);
+            answer.splice(j, 1);
+            return answer;
+          }
+        }
+
+      }
+    }
+
+    let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13];
+    console.log(solution(arr));
+  </script>
+</body>
+
+</html>
