@@ -1,0 +1,37 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>출력결과</title>
+</head>
+
+<body>
+  <script>
+    function solution(a, b, c) {
+
+      // 삼각형의 조건은 제일 큰 변의 길이가 다른 두 변의 길이 합보다 작아야 한다.
+      // 같아도 안됨!!
+
+      let answer = "YES", max;
+
+      if (a < b)
+        max = b
+      else
+        max = a;
+
+      if (max < c)
+        max = c;
+
+      const temp = a + b + c - max;
+
+      if (temp < max)
+        answer = "NO"
+
+      return answer;
+    }
+
+    console.log(solution(6, 7, 11));
+  </script>
+</body>
+
+</html>

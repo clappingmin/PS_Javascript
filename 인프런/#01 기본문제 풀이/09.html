@@ -1,0 +1,34 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>출력결과</title>
+</head>
+
+<body>
+  <script>
+    function solution(s) {
+
+      let answer = '';
+      for (let x of s) {
+        if (x === 'A') {
+          answer += '#'
+          continue;
+        }
+        answer += x;
+      }
+      // 정규식을 사용하는 방법
+      // g의 의미는 global 전체의 문자열을 바꿈
+      s = s.replace(/A/g, '#');
+
+      console.log(s);
+
+      return answer;
+    }
+
+    let str = "BANANA";
+    console.log(solution(str));
+  </script>
+</body>
+
+</html>
